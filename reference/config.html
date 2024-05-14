@@ -1,0 +1,1892 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="">
+    
+    
+      
+        <title>Config Reference - CSML Cube Importer</title>
+      
+    
+    
+      
+        
+        
+          
+          
+          <meta name="theme-color" content="#4051b5">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+        <link rel="stylesheet" type="text/css" href="../_static/sphinx_immaterial_theme.359ec555e2989f00f.min.css?v=b000af5c" />
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#main" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="CSML Cube Importer" class="md-header__button md-logo" aria-label="CSML Cube Importer" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CSML Cube Importer
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Config Reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="CSML Cube Importer" class="md-nav__button md-logo" aria-label="CSML Cube Importer" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+    </a>
+    CSML Cube Importer
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        <span class="md-ellipsis">Home</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          <span class="md-ellipsis">Config Reference</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="#" class="md-nav__link md-nav__link--active">
+        <span class="md-ellipsis">Config Reference</span>
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#main" class="md-nav__link">
+    <span title="reference/config:main (reference label)" class="md-ellipsis">Main</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Main">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-CsmlConfig" class="md-nav__link">
+    <span aria-label="JSON type" class="objinfo-icon objinfo-icon__data" title="JSON type">J</span><span title="CsmlConfig (JSON type)" class="md-ellipsis">Csml<wbr>Config</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CsmlConfig">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-members-json-CsmlConfig" class="md-nav__link">
+    <span class="md-ellipsis">Required members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Required members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-CsmlConfig.source" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="CsmlConfig.source (JSON member)" class="md-ellipsis">source</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-CsmlConfig.schema" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="CsmlConfig.schema (JSON member)" class="md-ellipsis">schema</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-CsmlConfig.export" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="CsmlConfig.export (JSON member)" class="md-ellipsis">export</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scival" class="md-nav__link">
+    <span title="reference/config:scival (reference label)" class="md-ellipsis">Scival</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scival">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-ScivalConfig" class="md-nav__link">
+    <span aria-label="JSON type" class="objinfo-icon objinfo-icon__data" title="JSON type">J</span><span title="ScivalConfig (JSON type)" class="md-ellipsis">Scival<wbr>Config</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ScivalConfig">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-members-json-ScivalConfig" class="md-nav__link">
+    <span class="md-ellipsis">Required members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Required members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-ScivalConfig.type" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="ScivalConfig.type (JSON member)" class="md-ellipsis">type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-ScivalConfig.glob" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="ScivalConfig.glob (JSON member)" class="md-ellipsis">glob</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-ScivalConfig.header_length" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="ScivalConfig.header_length (JSON member)" class="md-ellipsis">header_<wbr>length</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-ScivalConfig.fields" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="ScivalConfig.fields (JSON member)" class="md-ellipsis">fields</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-ScivalConfig.category_mapping" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="ScivalConfig.category_mapping (JSON member)" class="md-ellipsis">category_<wbr>mapping</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-members-json-ScivalConfig" class="md-nav__link">
+    <span class="md-ellipsis">Optional members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optional members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-ScivalConfig.authors" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="ScivalConfig.authors (JSON member)" class="md-ellipsis">authors</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-of-science" class="md-nav__link">
+    <span title="reference/config:web of science (reference label)" class="md-ellipsis">Web of Science</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Web of Science">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-WosConfig" class="md-nav__link">
+    <span aria-label="JSON type" class="objinfo-icon objinfo-icon__data" title="JSON type">J</span><span title="WosConfig (JSON type)" class="md-ellipsis">Wos<wbr>Config</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WosConfig">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-members-json-WosConfig" class="md-nav__link">
+    <span class="md-ellipsis">Required members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Required members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-WosConfig.type" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="WosConfig.type (JSON member)" class="md-ellipsis">type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-WosConfig.wos" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="WosConfig.wos (JSON member)" class="md-ellipsis">wos</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-WosConfig.incites" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="WosConfig.incites (JSON member)" class="md-ellipsis">incites</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-SourceParams" class="md-nav__link">
+    <span aria-label="JSON type" class="objinfo-icon objinfo-icon__data" title="JSON type">J</span><span title="SourceParams (JSON type)" class="md-ellipsis">Source<wbr>Params</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SourceParams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-members-json-SourceParams" class="md-nav__link">
+    <span class="md-ellipsis">Required members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Required members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-SourceParams.glob" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="SourceParams.glob (JSON member)" class="md-ellipsis">glob</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-WosSourceParams" class="md-nav__link">
+    <span aria-label="JSON type" class="objinfo-icon objinfo-icon__data" title="JSON type">J</span><span title="WosSourceParams (JSON type)" class="md-ellipsis">Wos<wbr>Source<wbr>Params</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WosSourceParams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-members-json-WosSourceParams" class="md-nav__link">
+    <span class="md-ellipsis">Required members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Required members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-WosSourceParams.glob" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="WosSourceParams.glob (JSON member)" class="md-ellipsis">glob</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-members-json-WosSourceParams" class="md-nav__link">
+    <span class="md-ellipsis">Optional members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optional members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-WosSourceParams.address" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="WosSourceParams.address (JSON member)" class="md-ellipsis">address</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-AddressParams" class="md-nav__link">
+    <span aria-label="JSON type" class="objinfo-icon objinfo-icon__data" title="JSON type">J</span><span title="AddressParams (JSON type)" class="md-ellipsis">Address<wbr>Params</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AddressParams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optional-members-json-AddressParams" class="md-nav__link">
+    <span class="md-ellipsis">Optional members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optional members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-AddressParams.ussr" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="AddressParams.ussr (JSON member)" class="md-ellipsis">ussr</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-UssrParams" class="md-nav__link">
+    <span aria-label="JSON type" class="objinfo-icon objinfo-icon__data" title="JSON type">J</span><span title="UssrParams (JSON type)" class="md-ellipsis">Ussr<wbr>Params</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UssrParams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optional-members-json-UssrParams" class="md-nav__link">
+    <span class="md-ellipsis">Optional members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optional members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-UssrParams.republics" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="UssrParams.republics (JSON member)" class="md-ellipsis">republics</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pure" class="md-nav__link">
+    <span title="reference/config:pure (reference label)" class="md-ellipsis">Pure</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-PureConfig" class="md-nav__link">
+    <span aria-label="JSON type" class="objinfo-icon objinfo-icon__data" title="JSON type">J</span><span title="PureConfig (JSON type)" class="md-ellipsis">Pure<wbr>Config</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PureConfig">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-members-json-PureConfig" class="md-nav__link">
+    <span class="md-ellipsis">Required members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Required members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-PureConfig.type" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="PureConfig.type (JSON member)" class="md-ellipsis">type</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-members-json-PureConfig" class="md-nav__link">
+    <span class="md-ellipsis">Optional members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optional members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-PureConfig.internalorg" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="PureConfig.internalorg (JSON member)" class="md-ellipsis">internalorg</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-PureConfig.externalorg" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="PureConfig.externalorg (JSON member)" class="md-ellipsis">externalorg</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-PureConfig.type_pure_org_ids" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="PureConfig.type_pure_org_ids (JSON member)" class="md-ellipsis">type_<wbr>pure_<wbr>org_<wbr>ids</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-PureConfig.internalperson" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="PureConfig.internalperson (JSON member)" class="md-ellipsis">internalperson</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-PureConfig.records" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="PureConfig.records (JSON member)" class="md-ellipsis">records</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-PureConfig.type_pure_person_id" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="PureConfig.type_pure_person_id (JSON member)" class="md-ellipsis">type_<wbr>pure_<wbr>person_<wbr>id</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-PureConfig.type_pure_person_name" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="PureConfig.type_pure_person_name (JSON member)" class="md-ellipsis">type_<wbr>pure_<wbr>person_<wbr>name</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-PureConfig.type_record_ids" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="PureConfig.type_record_ids (JSON member)" class="md-ellipsis">type_<wbr>record_<wbr>ids</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-PureConfig.journals" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="PureConfig.journals (JSON member)" class="md-ellipsis">journals</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-XmlSource" class="md-nav__link">
+    <span aria-label="JSON type" class="objinfo-icon objinfo-icon__data" title="JSON type">J</span><span title="XmlSource (JSON type)" class="md-ellipsis">Xml<wbr>Source</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="XmlSource">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-members-json-XmlSource" class="md-nav__link">
+    <span class="md-ellipsis">Required members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Required members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-XmlSource.type" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="XmlSource.type (JSON member)" class="md-ellipsis">type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-XmlSource.glob" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="XmlSource.glob (JSON member)" class="md-ellipsis">glob</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elibrary" class="md-nav__link">
+    <span title="reference/config:elibrary (reference label)" class="md-ellipsis">e<wbr>Library</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="eLibrary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-ElibraryConfig" class="md-nav__link">
+    <span aria-label="JSON type" class="objinfo-icon objinfo-icon__data" title="JSON type">J</span><span title="ElibraryConfig (JSON type)" class="md-ellipsis">Elibrary<wbr>Config</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ElibraryConfig">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-members-json-ElibraryConfig" class="md-nav__link">
+    <span class="md-ellipsis">Required members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Required members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-ElibraryConfig.type" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="ElibraryConfig.type (JSON member)" class="md-ellipsis">type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-ElibraryConfig.glob" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="ElibraryConfig.glob (JSON member)" class="md-ellipsis">glob</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-members-json-ElibraryConfig" class="md-nav__link">
+    <span class="md-ellipsis">Optional members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optional members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-ElibraryConfig.encoding" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="ElibraryConfig.encoding (JSON member)" class="md-ellipsis">encoding</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cli.html" class="md-nav__link">
+        <span class="md-ellipsis">Cli Reference</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/snorkysnark/csml/tree/main/examples" class="md-nav__link">
+        <span class="md-ellipsis">Examples</span>
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#main" class="md-nav__link">
+    <span title="reference/config:main (reference label)" class="md-ellipsis">Main</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Main">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-CsmlConfig" class="md-nav__link">
+    <span aria-label="JSON type" class="objinfo-icon objinfo-icon__data" title="JSON type">J</span><span title="CsmlConfig (JSON type)" class="md-ellipsis">Csml<wbr>Config</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CsmlConfig">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-members-json-CsmlConfig" class="md-nav__link">
+    <span class="md-ellipsis">Required members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Required members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-CsmlConfig.source" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="CsmlConfig.source (JSON member)" class="md-ellipsis">source</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-CsmlConfig.schema" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="CsmlConfig.schema (JSON member)" class="md-ellipsis">schema</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-CsmlConfig.export" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="CsmlConfig.export (JSON member)" class="md-ellipsis">export</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scival" class="md-nav__link">
+    <span title="reference/config:scival (reference label)" class="md-ellipsis">Scival</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scival">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-ScivalConfig" class="md-nav__link">
+    <span aria-label="JSON type" class="objinfo-icon objinfo-icon__data" title="JSON type">J</span><span title="ScivalConfig (JSON type)" class="md-ellipsis">Scival<wbr>Config</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ScivalConfig">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-members-json-ScivalConfig" class="md-nav__link">
+    <span class="md-ellipsis">Required members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Required members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-ScivalConfig.type" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="ScivalConfig.type (JSON member)" class="md-ellipsis">type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-ScivalConfig.glob" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="ScivalConfig.glob (JSON member)" class="md-ellipsis">glob</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-ScivalConfig.header_length" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="ScivalConfig.header_length (JSON member)" class="md-ellipsis">header_<wbr>length</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-ScivalConfig.fields" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="ScivalConfig.fields (JSON member)" class="md-ellipsis">fields</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-ScivalConfig.category_mapping" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="ScivalConfig.category_mapping (JSON member)" class="md-ellipsis">category_<wbr>mapping</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-members-json-ScivalConfig" class="md-nav__link">
+    <span class="md-ellipsis">Optional members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optional members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-ScivalConfig.authors" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="ScivalConfig.authors (JSON member)" class="md-ellipsis">authors</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-of-science" class="md-nav__link">
+    <span title="reference/config:web of science (reference label)" class="md-ellipsis">Web of Science</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Web of Science">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-WosConfig" class="md-nav__link">
+    <span aria-label="JSON type" class="objinfo-icon objinfo-icon__data" title="JSON type">J</span><span title="WosConfig (JSON type)" class="md-ellipsis">Wos<wbr>Config</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WosConfig">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-members-json-WosConfig" class="md-nav__link">
+    <span class="md-ellipsis">Required members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Required members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-WosConfig.type" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="WosConfig.type (JSON member)" class="md-ellipsis">type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-WosConfig.wos" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="WosConfig.wos (JSON member)" class="md-ellipsis">wos</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-WosConfig.incites" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="WosConfig.incites (JSON member)" class="md-ellipsis">incites</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-SourceParams" class="md-nav__link">
+    <span aria-label="JSON type" class="objinfo-icon objinfo-icon__data" title="JSON type">J</span><span title="SourceParams (JSON type)" class="md-ellipsis">Source<wbr>Params</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SourceParams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-members-json-SourceParams" class="md-nav__link">
+    <span class="md-ellipsis">Required members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Required members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-SourceParams.glob" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="SourceParams.glob (JSON member)" class="md-ellipsis">glob</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-WosSourceParams" class="md-nav__link">
+    <span aria-label="JSON type" class="objinfo-icon objinfo-icon__data" title="JSON type">J</span><span title="WosSourceParams (JSON type)" class="md-ellipsis">Wos<wbr>Source<wbr>Params</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WosSourceParams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-members-json-WosSourceParams" class="md-nav__link">
+    <span class="md-ellipsis">Required members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Required members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-WosSourceParams.glob" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="WosSourceParams.glob (JSON member)" class="md-ellipsis">glob</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-members-json-WosSourceParams" class="md-nav__link">
+    <span class="md-ellipsis">Optional members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optional members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-WosSourceParams.address" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="WosSourceParams.address (JSON member)" class="md-ellipsis">address</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-AddressParams" class="md-nav__link">
+    <span aria-label="JSON type" class="objinfo-icon objinfo-icon__data" title="JSON type">J</span><span title="AddressParams (JSON type)" class="md-ellipsis">Address<wbr>Params</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AddressParams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optional-members-json-AddressParams" class="md-nav__link">
+    <span class="md-ellipsis">Optional members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optional members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-AddressParams.ussr" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="AddressParams.ussr (JSON member)" class="md-ellipsis">ussr</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-UssrParams" class="md-nav__link">
+    <span aria-label="JSON type" class="objinfo-icon objinfo-icon__data" title="JSON type">J</span><span title="UssrParams (JSON type)" class="md-ellipsis">Ussr<wbr>Params</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UssrParams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optional-members-json-UssrParams" class="md-nav__link">
+    <span class="md-ellipsis">Optional members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optional members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-UssrParams.republics" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="UssrParams.republics (JSON member)" class="md-ellipsis">republics</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pure" class="md-nav__link">
+    <span title="reference/config:pure (reference label)" class="md-ellipsis">Pure</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-PureConfig" class="md-nav__link">
+    <span aria-label="JSON type" class="objinfo-icon objinfo-icon__data" title="JSON type">J</span><span title="PureConfig (JSON type)" class="md-ellipsis">Pure<wbr>Config</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PureConfig">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-members-json-PureConfig" class="md-nav__link">
+    <span class="md-ellipsis">Required members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Required members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-PureConfig.type" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="PureConfig.type (JSON member)" class="md-ellipsis">type</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-members-json-PureConfig" class="md-nav__link">
+    <span class="md-ellipsis">Optional members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optional members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-PureConfig.internalorg" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="PureConfig.internalorg (JSON member)" class="md-ellipsis">internalorg</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-PureConfig.externalorg" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="PureConfig.externalorg (JSON member)" class="md-ellipsis">externalorg</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-PureConfig.type_pure_org_ids" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="PureConfig.type_pure_org_ids (JSON member)" class="md-ellipsis">type_<wbr>pure_<wbr>org_<wbr>ids</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-PureConfig.internalperson" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="PureConfig.internalperson (JSON member)" class="md-ellipsis">internalperson</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-PureConfig.records" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="PureConfig.records (JSON member)" class="md-ellipsis">records</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-PureConfig.type_pure_person_id" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="PureConfig.type_pure_person_id (JSON member)" class="md-ellipsis">type_<wbr>pure_<wbr>person_<wbr>id</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-PureConfig.type_pure_person_name" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="PureConfig.type_pure_person_name (JSON member)" class="md-ellipsis">type_<wbr>pure_<wbr>person_<wbr>name</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-PureConfig.type_record_ids" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="PureConfig.type_record_ids (JSON member)" class="md-ellipsis">type_<wbr>record_<wbr>ids</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-PureConfig.journals" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="PureConfig.journals (JSON member)" class="md-ellipsis">journals</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-XmlSource" class="md-nav__link">
+    <span aria-label="JSON type" class="objinfo-icon objinfo-icon__data" title="JSON type">J</span><span title="XmlSource (JSON type)" class="md-ellipsis">Xml<wbr>Source</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="XmlSource">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-members-json-XmlSource" class="md-nav__link">
+    <span class="md-ellipsis">Required members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Required members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-XmlSource.type" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="XmlSource.type (JSON member)" class="md-ellipsis">type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-XmlSource.glob" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="XmlSource.glob (JSON member)" class="md-ellipsis">glob</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elibrary" class="md-nav__link">
+    <span title="reference/config:elibrary (reference label)" class="md-ellipsis">e<wbr>Library</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="eLibrary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-ElibraryConfig" class="md-nav__link">
+    <span aria-label="JSON type" class="objinfo-icon objinfo-icon__data" title="JSON type">J</span><span title="ElibraryConfig (JSON type)" class="md-ellipsis">Elibrary<wbr>Config</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ElibraryConfig">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-members-json-ElibraryConfig" class="md-nav__link">
+    <span class="md-ellipsis">Required members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Required members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-ElibraryConfig.type" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="ElibraryConfig.type (JSON member)" class="md-ellipsis">type</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-ElibraryConfig.glob" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="ElibraryConfig.glob (JSON member)" class="md-ellipsis">glob</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-members-json-ElibraryConfig" class="md-nav__link">
+    <span class="md-ellipsis">Optional members</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optional members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-ElibraryConfig.encoding" class="md-nav__link">
+    <span aria-label="JSON member" class="objinfo-icon objinfo-icon__sub-data" title="JSON member">j</span><span title="ElibraryConfig.encoding (JSON member)" class="md-ellipsis">encoding</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset" role="main">
+                  
+
+
+<h1 id="config-reference">Config Reference<a class="headerlink" href="#config-reference" title="Link to this heading">¶</a></h1>
+<h2 id="main"><span id="config"></span>Main<a class="headerlink" href="#main" title="Link to this heading">¶</a></h2>
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-CsmlConfig">
+<em class="property"><span class="pre">json</span> </em><span class="sig-name descname"><span class="pre">CsmlConfig</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><span class="pre">object</span></span><a class="headerlink" href="#json-CsmlConfig" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd" id="required-members-json-CsmlConfig">Required members<span class="colon">:</span><a class="headerlink" href="#required-members-json-CsmlConfig" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd noindent"><dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-CsmlConfig.source">
+<span class="sig-name descname"><span class="pre">source</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><a class="reference internal" href="#json-ScivalConfig" title="ScivalConfig (JSON type)"><span class="pre">ScivalConfig</span></a></span><span class="p"> <span class="pre">|</span> </span><span class="desctype"><a class="reference internal" href="#json-WosConfig" title="WosConfig (JSON type)"><span class="pre">WosConfig</span></a></span><span class="p"> <span class="pre">|</span> </span><span class="desctype"><a class="reference internal" href="#json-PureConfig" title="PureConfig (JSON type)"><span class="pre">PureConfig</span></a></span><span class="p"> <span class="pre">|</span> </span><span class="desctype"><a class="reference internal" href="#json-ElibraryConfig" title="ElibraryConfig (JSON type)"><span class="pre">ElibraryConfig</span></a></span><a class="headerlink" href="#json-CsmlConfig.source" title="Link to this definition">¶</a></dt>
+<dd><p>Source-specifc configuration</p>
+</dd></dl>
+
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-CsmlConfig.schema">
+<span class="sig-name descname"><span class="pre">schema</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><span class="pre">array</span></span><em> <span class="pre">of</span> </em><span class="desctype"><span class="pre">string</span></span><a class="headerlink" href="#json-CsmlConfig.schema" title="Link to this definition">¶</a></dt>
+<dd><p>List of SQL scripts initializing the CSML schema</p>
+</dd></dl>
+
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-CsmlConfig.export">
+<span class="sig-name descname"><span class="pre">export</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><span class="pre">array</span></span><em> <span class="pre">of</span> </em><span class="desctype"><span class="pre">string</span></span><a class="headerlink" href="#json-CsmlConfig.export" title="Link to this definition">¶</a></dt>
+<dd><p>List of SQL scripts copying data from the <strong>tmp</strong> schema into the main schema</p>
+</dd></dl>
+
+</dd>
+</dl>
+</dd></dl>
+
+<h2 id="scival">Scival<a class="headerlink" href="#scival" title="Link to this heading">¶</a></h2>
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-ScivalConfig">
+<em class="property"><span class="pre">json</span> </em><span class="sig-name descname"><span class="pre">ScivalConfig</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><span class="pre">object</span></span><a class="headerlink" href="#json-ScivalConfig" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd" id="required-members-json-ScivalConfig">Required members<span class="colon">:</span><a class="headerlink" href="#required-members-json-ScivalConfig" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd noindent"><dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-ScivalConfig.type">
+<span class="sig-name descname"><span class="pre">type</span></span><span class="p"> <span class="pre">:</span> </span><code class="code json docutils literal highlight highlight-json"><span class="s2">&quot;scival&quot;</span></code><a class="headerlink" href="#json-ScivalConfig.type" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-ScivalConfig.glob">
+<span class="sig-name descname"><span class="pre">glob</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><span class="pre">string</span></span><a class="headerlink" href="#json-ScivalConfig.glob" title="Link to this definition">¶</a></dt>
+<dd><p>A <em>glob</em> pattern for finding CSVs, such as <code class="docutils literal notranslate"><span class="pre">./folder/*.csv</span></code></p>
+</dd></dl>
+
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-ScivalConfig.header_length">
+<span class="sig-name descname"><span class="pre">header_length</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><span class="pre">integer</span></span><span class="p"> <span class="pre">|</span> </span><code class="code json docutils literal highlight highlight-json"><span class="s2">&quot;auto&quot;</span></code><a class="headerlink" href="#json-ScivalConfig.header_length" title="Link to this definition">¶</a></dt>
+<dd><p>number of lines to skip, or <strong>auto</strong> for auto-detection</p>
+</dd></dl>
+
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-ScivalConfig.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><span class="pre">object</span></span><a class="headerlink" href="#json-ScivalConfig.fields" title="Link to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line">Fields that will be imported into the database for further processing</div>
+<div class="line">The key is the CSV field name, and the value is the column name in <em>sqlite</em> table</div>
+<div class="line"><br /></div>
+<div class="line">The recommended way to generate those is by checking your CSV</div>
+<div class="line">(with <a class="reference internal" href="cli.html#csml-py-check-scival-fields"><span class="std std-ref">check-scival-fields</span></a>) against and existing config, then renaming</div>
+<div class="line">whatever fields have changed</div>
+</div>
+</dd></dl>
+
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-ScivalConfig.category_mapping">
+<span class="sig-name descname"><span class="pre">category_mapping</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><span class="pre">object</span></span><a class="headerlink" href="#json-ScivalConfig.category_mapping" title="Link to this definition">¶</a></dt>
+<dd><p>Mapping a column name from <strong>fields</strong> to the corresponding <code class="docutils literal notranslate"><span class="pre">csml_record_category.type_category</span></code> id</p>
+</dd></dl>
+
+</dd>
+</dl>
+<dl class="field-list">
+<dt class="field-odd" id="optional-members-json-ScivalConfig">Optional members<span class="colon">:</span><a class="headerlink" href="#optional-members-json-ScivalConfig" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd noindent"><dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-ScivalConfig.authors">
+<span class="sig-name descname"><span class="pre">authors</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><span class="pre">AuthorsConfig</span></span><span class="p"> <span class="pre">|</span> </span><code class="code json docutils literal highlight highlight-json"><span class="kc">null</span></code><span class="p"> <span class="pre">=</span> </span><code class="code json docutils literal highlight highlight-json"><span class="kc">null</span></code><a class="headerlink" href="#json-ScivalConfig.authors" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd>
+</dl>
+</dd></dl>
+
+<h2 id="web-of-science">Web of Science<a class="headerlink" href="#web-of-science" title="Link to this heading">¶</a></h2>
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-WosConfig">
+<em class="property"><span class="pre">json</span> </em><span class="sig-name descname"><span class="pre">WosConfig</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><span class="pre">object</span></span><a class="headerlink" href="#json-WosConfig" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd" id="required-members-json-WosConfig">Required members<span class="colon">:</span><a class="headerlink" href="#required-members-json-WosConfig" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd noindent"><dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-WosConfig.type">
+<span class="sig-name descname"><span class="pre">type</span></span><span class="p"> <span class="pre">:</span> </span><code class="code json docutils literal highlight highlight-json"><span class="s2">&quot;wos&quot;</span></code><a class="headerlink" href="#json-WosConfig.type" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-WosConfig.wos">
+<span class="sig-name descname"><span class="pre">wos</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><a class="reference internal" href="#json-WosSourceParams" title="WosSourceParams (JSON type)"><span class="pre">WosSourceParams</span></a></span><a class="headerlink" href="#json-WosConfig.wos" title="Link to this definition">¶</a></dt>
+<dd><p>Web of Science sources</p>
+</dd></dl>
+
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-WosConfig.incites">
+<span class="sig-name descname"><span class="pre">incites</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><a class="reference internal" href="#json-SourceParams" title="SourceParams (JSON type)"><span class="pre">SourceParams</span></a></span><span class="p"> <span class="pre">|</span> </span><code class="code json docutils literal highlight highlight-json"><span class="kc">null</span></code><a class="headerlink" href="#json-WosConfig.incites" title="Link to this definition">¶</a></dt>
+<dd><p>IcCites sources (optional)</p>
+</dd></dl>
+
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-SourceParams">
+<em class="property"><span class="pre">json</span> </em><span class="sig-name descname"><span class="pre">SourceParams</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><span class="pre">object</span></span><a class="headerlink" href="#json-SourceParams" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd" id="required-members-json-SourceParams">Required members<span class="colon">:</span><a class="headerlink" href="#required-members-json-SourceParams" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd noindent"><dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-SourceParams.glob">
+<span class="sig-name descname"><span class="pre">glob</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><span class="pre">string</span></span><a class="headerlink" href="#json-SourceParams.glob" title="Link to this definition">¶</a></dt>
+<dd><p>Glob for finding source files</p>
+</dd></dl>
+
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-WosSourceParams">
+<em class="property"><span class="pre">json</span> </em><span class="sig-name descname"><span class="pre">WosSourceParams</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><span class="pre">object</span></span><a class="headerlink" href="#json-WosSourceParams" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd" id="required-members-json-WosSourceParams">Required members<span class="colon">:</span><a class="headerlink" href="#required-members-json-WosSourceParams" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd noindent"><dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-WosSourceParams.glob">
+<span class="sig-name descname"><span class="pre">glob</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><span class="pre">string</span></span><a class="headerlink" href="#json-WosSourceParams.glob" title="Link to this definition">¶</a></dt>
+<dd><p>Glob for finding source files</p>
+</dd></dl>
+
+</dd>
+</dl>
+<dl class="field-list">
+<dt class="field-odd" id="optional-members-json-WosSourceParams">Optional members<span class="colon">:</span><a class="headerlink" href="#optional-members-json-WosSourceParams" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd noindent"><dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-WosSourceParams.address">
+<span class="sig-name descname"><span class="pre">address</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><a class="reference internal" href="#json-AddressParams" title="AddressParams (JSON type)"><span class="pre">AddressParams</span></a></span><span class="p"> <span class="pre">=</span> </span><code class="code json docutils literal highlight highlight-json"><span class="p">{</span><span class="nt">&quot;ussr&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;republics&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]}}</span></code><a class="headerlink" href="#json-WosSourceParams.address" title="Link to this definition">¶</a></dt>
+<dd><p>Settings for country-specific address parsing</p>
+</dd></dl>
+
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-AddressParams">
+<em class="property"><span class="pre">json</span> </em><span class="sig-name descname"><span class="pre">AddressParams</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><span class="pre">object</span></span><a class="headerlink" href="#json-AddressParams" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd" id="optional-members-json-AddressParams">Optional members<span class="colon">:</span><a class="headerlink" href="#optional-members-json-AddressParams" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd noindent"><dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-AddressParams.ussr">
+<span class="sig-name descname"><span class="pre">ussr</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><a class="reference internal" href="#json-UssrParams" title="UssrParams (JSON type)"><span class="pre">UssrParams</span></a></span><span class="p"> <span class="pre">=</span> </span><code class="code json docutils literal highlight highlight-json"><span class="p">{</span><span class="nt">&quot;republics&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]}</span></code><a class="headerlink" href="#json-AddressParams.ussr" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-UssrParams">
+<em class="property"><span class="pre">json</span> </em><span class="sig-name descname"><span class="pre">UssrParams</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><span class="pre">object</span></span><a class="headerlink" href="#json-UssrParams" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd" id="optional-members-json-UssrParams">Optional members<span class="colon">:</span><a class="headerlink" href="#optional-members-json-UssrParams" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd noindent"><dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-UssrParams.republics">
+<span class="sig-name descname"><span class="pre">republics</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><span class="pre">array</span></span><em> <span class="pre">of</span> </em><span class="desctype"><span class="pre">string</span></span><span class="p"> <span class="pre">=</span> </span><code class="code json docutils literal highlight highlight-json"><span class="p">[]</span></code><a class="headerlink" href="#json-UssrParams.republics" title="Link to this definition">¶</a></dt>
+<dd><p>List of Soviet republics</p>
+<p>Since ordering is inconsistent, the parser needs to distinguish them from city names</p>
+</dd></dl>
+
+</dd>
+</dl>
+</dd></dl>
+
+<h2 id="pure">Pure<a class="headerlink" href="#pure" title="Link to this heading">¶</a></h2>
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-PureConfig">
+<em class="property"><span class="pre">json</span> </em><span class="sig-name descname"><span class="pre">PureConfig</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><span class="pre">object</span></span><a class="headerlink" href="#json-PureConfig" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd" id="required-members-json-PureConfig">Required members<span class="colon">:</span><a class="headerlink" href="#required-members-json-PureConfig" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd noindent"><dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-PureConfig.type">
+<span class="sig-name descname"><span class="pre">type</span></span><span class="p"> <span class="pre">:</span> </span><code class="code json docutils literal highlight highlight-json"><span class="s2">&quot;pure&quot;</span></code><a class="headerlink" href="#json-PureConfig.type" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd>
+</dl>
+<dl class="field-list">
+<dt class="field-odd" id="optional-members-json-PureConfig">Optional members<span class="colon">:</span><a class="headerlink" href="#optional-members-json-PureConfig" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd noindent"><dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-PureConfig.internalorg">
+<span class="sig-name descname"><span class="pre">internalorg</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><a class="reference internal" href="#json-XmlSource" title="XmlSource (JSON type)"><span class="pre">XmlSource</span></a></span><span class="p"> <span class="pre">|</span> </span><code class="code json docutils literal highlight highlight-json"><span class="kc">null</span></code><span class="p"> <span class="pre">=</span> </span><code class="code json docutils literal highlight highlight-json"><span class="kc">null</span></code><a class="headerlink" href="#json-PureConfig.internalorg" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-PureConfig.externalorg">
+<span class="sig-name descname"><span class="pre">externalorg</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><a class="reference internal" href="#json-XmlSource" title="XmlSource (JSON type)"><span class="pre">XmlSource</span></a></span><span class="p"> <span class="pre">|</span> </span><code class="code json docutils literal highlight highlight-json"><span class="kc">null</span></code><span class="p"> <span class="pre">=</span> </span><code class="code json docutils literal highlight highlight-json"><span class="kc">null</span></code><a class="headerlink" href="#json-PureConfig.externalorg" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-PureConfig.type_pure_org_ids">
+<span class="sig-name descname"><span class="pre">type_pure_org_ids</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><span class="pre">object</span></span><span class="p"> <span class="pre">=</span> </span><code class="code json docutils literal highlight highlight-json"><span class="p">{}</span></code><a class="headerlink" href="#json-PureConfig.type_pure_org_ids" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-PureConfig.internalperson">
+<span class="sig-name descname"><span class="pre">internalperson</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><a class="reference internal" href="#json-XmlSource" title="XmlSource (JSON type)"><span class="pre">XmlSource</span></a></span><span class="p"> <span class="pre">|</span> </span><code class="code json docutils literal highlight highlight-json"><span class="kc">null</span></code><span class="p"> <span class="pre">=</span> </span><code class="code json docutils literal highlight highlight-json"><span class="kc">null</span></code><a class="headerlink" href="#json-PureConfig.internalperson" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-PureConfig.records">
+<span class="sig-name descname"><span class="pre">records</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><a class="reference internal" href="#json-XmlSource" title="XmlSource (JSON type)"><span class="pre">XmlSource</span></a></span><span class="p"> <span class="pre">|</span> </span><code class="code json docutils literal highlight highlight-json"><span class="kc">null</span></code><span class="p"> <span class="pre">=</span> </span><code class="code json docutils literal highlight highlight-json"><span class="kc">null</span></code><a class="headerlink" href="#json-PureConfig.records" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-PureConfig.type_pure_person_id">
+<span class="sig-name descname"><span class="pre">type_pure_person_id</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><span class="pre">object</span></span><span class="p"> <span class="pre">=</span> </span><code class="code json docutils literal highlight highlight-json"><span class="p">{}</span></code><a class="headerlink" href="#json-PureConfig.type_pure_person_id" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-PureConfig.type_pure_person_name">
+<span class="sig-name descname"><span class="pre">type_pure_person_name</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><span class="pre">object</span></span><span class="p"> <span class="pre">=</span> </span><code class="code json docutils literal highlight highlight-json"><span class="p">{}</span></code><a class="headerlink" href="#json-PureConfig.type_pure_person_name" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-PureConfig.type_record_ids">
+<span class="sig-name descname"><span class="pre">type_record_ids</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><span class="pre">object</span></span><span class="p"> <span class="pre">=</span> </span><code class="code json docutils literal highlight highlight-json"><span class="p">{}</span></code><a class="headerlink" href="#json-PureConfig.type_record_ids" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-PureConfig.journals">
+<span class="sig-name descname"><span class="pre">journals</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><a class="reference internal" href="#json-XmlSource" title="XmlSource (JSON type)"><span class="pre">XmlSource</span></a></span><span class="p"> <span class="pre">|</span> </span><code class="code json docutils literal highlight highlight-json"><span class="kc">null</span></code><span class="p"> <span class="pre">=</span> </span><code class="code json docutils literal highlight highlight-json"><span class="kc">null</span></code><a class="headerlink" href="#json-PureConfig.journals" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-XmlSource">
+<em class="property"><span class="pre">json</span> </em><span class="sig-name descname"><span class="pre">XmlSource</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><span class="pre">object</span></span><a class="headerlink" href="#json-XmlSource" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd" id="required-members-json-XmlSource">Required members<span class="colon">:</span><a class="headerlink" href="#required-members-json-XmlSource" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd noindent"><dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-XmlSource.type">
+<span class="sig-name descname"><span class="pre">type</span></span><span class="p"> <span class="pre">:</span> </span><code class="code json docutils literal highlight highlight-json"><span class="s2">&quot;xml&quot;</span></code><a class="headerlink" href="#json-XmlSource.type" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-XmlSource.glob">
+<span class="sig-name descname"><span class="pre">glob</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><span class="pre">string</span></span><a class="headerlink" href="#json-XmlSource.glob" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd>
+</dl>
+</dd></dl>
+
+<h2 id="elibrary">eLibrary<a class="headerlink" href="#elibrary" title="Link to this heading">¶</a></h2>
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-ElibraryConfig">
+<em class="property"><span class="pre">json</span> </em><span class="sig-name descname"><span class="pre">ElibraryConfig</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><span class="pre">object</span></span><a class="headerlink" href="#json-ElibraryConfig" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd" id="required-members-json-ElibraryConfig">Required members<span class="colon">:</span><a class="headerlink" href="#required-members-json-ElibraryConfig" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd noindent"><dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-ElibraryConfig.type">
+<span class="sig-name descname"><span class="pre">type</span></span><span class="p"> <span class="pre">:</span> </span><code class="code json docutils literal highlight highlight-json"><span class="s2">&quot;elibrary&quot;</span></code><a class="headerlink" href="#json-ElibraryConfig.type" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-ElibraryConfig.glob">
+<span class="sig-name descname"><span class="pre">glob</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><span class="pre">string</span></span><a class="headerlink" href="#json-ElibraryConfig.glob" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd>
+</dl>
+<dl class="field-list">
+<dt class="field-odd" id="optional-members-json-ElibraryConfig">Optional members<span class="colon">:</span><a class="headerlink" href="#optional-members-json-ElibraryConfig" title="Permalink to this headline">¶</a></dt>
+<dd class="field-odd noindent"><dl class="json schema objdesc">
+<dt class="sig sig-object highlight json" id="json-ElibraryConfig.encoding">
+<span class="sig-name descname"><span class="pre">encoding</span></span><span class="p"> <span class="pre">:</span> </span><span class="desctype"><span class="pre">string</span></span><span class="p"> <span class="pre">|</span> </span><code class="code json docutils literal highlight highlight-json"><span class="kc">null</span></code><span class="p"> <span class="pre">=</span> </span><code class="code json docutils literal highlight highlight-json"><span class="kc">null</span></code><a class="headerlink" href="#json-ElibraryConfig.encoding" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd>
+</dl>
+</dd></dl>
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Home
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="cli.html" class="md-footer__link md-footer__link--next" aria-label="Next: Cli Reference" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Cli Reference
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright 2023, snorkysnark.
+        
+    </div>
+  
+    Created using
+    <a href="https://www.sphinx-doc.org/" target="_blank" rel="noopener">Sphinx</a>
+    7.3.7.
+     and
+    <a href="https://github.com/jbms/sphinx-immaterial/" target="_blank" rel="noopener">Sphinx-Immaterial</a>
+  
+</div>
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+      
+        <script src="../_static/sphinx_immaterial_theme.f9d9eeeb247ace16c.min.js?v=8ec58cb5"></script>
+    
+  </body>
+</html>
